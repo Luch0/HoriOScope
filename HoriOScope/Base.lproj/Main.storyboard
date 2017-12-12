@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uDk-Q7-FvO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HoriOScope-->
+        <scene sceneID="2RH-TK-MKm">
+            <objects>
+                <viewController id="im6-hu-SEH" customClass="HomeViewController" customModule="HoriOScope" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4mJ-0v-aVV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greeting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyJ-ph-ISw">
+                                <rect key="frame" x="8" y="80" width="359" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Welcome to HoriOScope you can update your information by pressing the settings button" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wY4-5O-QG3">
+                                <rect key="frame" x="8" y="150" width="359" height="317"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Rd-4Gh">
+                                <rect key="frame" x="8" y="507" width="359" height="144"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcb-Ws-aw3">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                        <state key="normal" title="Yesterday"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="im6-hu-SEH" eventType="touchUpInside" id="hqL-YK-ffJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4j-th-vrr">
+                                        <rect key="frame" x="0.0" y="57" width="359" height="30"/>
+                                        <state key="normal" title="Today"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="im6-hu-SEH" eventType="touchUpInside" id="874-QL-f4H"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dI-18-SxF">
+                                        <rect key="frame" x="0.0" y="114" width="359" height="30"/>
+                                        <state key="normal" title="Tomorrow"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="im6-hu-SEH" eventType="touchUpInside" id="Tgp-oZ-qwe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rs9-7U-re0" firstAttribute="trailing" secondItem="6cy-Rd-4Gh" secondAttribute="trailing" constant="8" id="FAA-bA-Deg"/>
+                            <constraint firstItem="Rs9-7U-re0" firstAttribute="trailing" secondItem="qyJ-ph-ISw" secondAttribute="trailing" constant="8" id="Fd0-In-vXG"/>
+                            <constraint firstItem="Rs9-7U-re0" firstAttribute="bottom" secondItem="6cy-Rd-4Gh" secondAttribute="bottom" constant="16" id="H1T-EF-qSv"/>
+                            <constraint firstItem="wY4-5O-QG3" firstAttribute="top" secondItem="qyJ-ph-ISw" secondAttribute="bottom" constant="40" id="HRY-Av-eXQ"/>
+                            <constraint firstItem="qyJ-ph-ISw" firstAttribute="top" secondItem="Rs9-7U-re0" secondAttribute="top" constant="16" id="KNJ-Pj-wlI"/>
+                            <constraint firstItem="6cy-Rd-4Gh" firstAttribute="leading" secondItem="Rs9-7U-re0" secondAttribute="leading" constant="8" id="XnG-gP-SaJ"/>
+                            <constraint firstItem="wY4-5O-QG3" firstAttribute="leading" secondItem="Rs9-7U-re0" secondAttribute="leading" constant="8" id="dN9-fG-vTd"/>
+                            <constraint firstItem="6cy-Rd-4Gh" firstAttribute="top" secondItem="wY4-5O-QG3" secondAttribute="bottom" constant="40" id="jOn-YW-qMV"/>
+                            <constraint firstItem="Rs9-7U-re0" firstAttribute="trailing" secondItem="wY4-5O-QG3" secondAttribute="trailing" constant="8" id="ovT-nr-Mbv"/>
+                            <constraint firstItem="qyJ-ph-ISw" firstAttribute="leading" secondItem="Rs9-7U-re0" secondAttribute="leading" constant="8" id="yxG-cX-ypI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rs9-7U-re0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HoriOScope" id="Uxd-7G-kPh">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="cAS-7J-w8B">
+                            <connections>
+                                <segue destination="7gP-ds-hh5" kind="show" id="YxU-ez-fmE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameLabel" destination="qyJ-ph-ISw" id="sN5-k5-RVI"/>
+                        <outlet property="textView" destination="wY4-5O-QG3" id="Blr-GF-USh"/>
+                        <outlet property="todayButton" destination="V4j-th-vrr" id="yfA-XJ-0aY"/>
+                        <outlet property="tomorrowButton" destination="6dI-18-SxF" id="9Vi-xK-wNy"/>
+                        <outlet property="yesterdayButton" destination="gcb-Ws-aw3" id="shI-Gm-koM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6w-XA-4SU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.80000000000001" y="103.89805097451276"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="kKk-Cl-rHq">
+            <objects>
+                <viewController id="7gP-ds-hh5" customClass="SettingsViewController" customModule="HoriOScope" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yit-Ok-tR9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k2Y-wK-tPT">
+                                <rect key="frame" x="0.0" y="430.5" width="375" height="236.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your sign?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5l-rf-9sy">
+                                        <rect key="frame" x="117.5" y="0.0" width="140" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CsW-Fb-17Z">
+                                        <rect key="frame" x="27.5" y="20.5" width="320" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="R5l-rf-9sy" firstAttribute="centerX" secondItem="k2Y-wK-tPT" secondAttribute="centerX" id="DqJ-7a-9g0"/>
+                                    <constraint firstItem="CsW-Fb-17Z" firstAttribute="centerX" secondItem="k2Y-wK-tPT" secondAttribute="centerX" id="rgf-r1-5R9"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rf2-dw-8mG">
+                                <rect key="frame" x="8" y="72" width="359" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8M-6O-4C2">
+                                        <rect key="frame" x="104.5" y="0.0" width="150.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cf9-05-V7D">
+                                        <rect key="frame" x="86" y="30" width="187.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rf2-dw-8mG" firstAttribute="leading" secondItem="3M1-zX-i1F" secondAttribute="leading" constant="8" id="07x-zF-z08"/>
+                            <constraint firstItem="3M1-zX-i1F" firstAttribute="bottom" secondItem="k2Y-wK-tPT" secondAttribute="bottom" id="ARF-JT-wGt"/>
+                            <constraint firstItem="Cf9-05-V7D" firstAttribute="width" secondItem="yit-Ok-tR9" secondAttribute="width" multiplier="0.5" id="B1n-9y-WOV"/>
+                            <constraint firstItem="rf2-dw-8mG" firstAttribute="top" secondItem="3M1-zX-i1F" secondAttribute="top" constant="8" id="CpR-Il-bsn"/>
+                            <constraint firstItem="3M1-zX-i1F" firstAttribute="trailing" secondItem="rf2-dw-8mG" secondAttribute="trailing" constant="8" id="o1l-JB-X1W"/>
+                            <constraint firstItem="k2Y-wK-tPT" firstAttribute="leading" secondItem="3M1-zX-i1F" secondAttribute="leading" id="uGB-yl-ZpQ"/>
+                            <constraint firstItem="k2Y-wK-tPT" firstAttribute="top" secondItem="rf2-dw-8mG" secondAttribute="bottom" multiplier="3.2" constant="8" symbolic="YES" id="vuN-zL-i49"/>
+                            <constraint firstItem="3M1-zX-i1F" firstAttribute="trailing" secondItem="k2Y-wK-tPT" secondAttribute="trailing" id="wdC-1y-xUL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3M1-zX-i1F"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="Cf9-05-V7D" id="MnK-H2-kvg"/>
+                        <outlet property="pickerView" destination="CsW-Fb-17Z" id="li0-h9-Rmj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zer-LC-0Kj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="104"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AN7-LR-EIy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uDk-Q7-FvO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eFu-C6-RKu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="im6-hu-SEH" kind="relationship" relationship="rootViewController" id="RMr-8S-IcP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FT7-6K-hjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510" y="104"/>
+        </scene>
+    </scenes>
+</document>
